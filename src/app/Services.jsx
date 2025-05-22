@@ -1,46 +1,56 @@
-import { FaPaw } from 'react-icons/fa';
+import { FaBroom, FaDog, FaHippo, FaImage, FaPaw, FaTree, FaWalking } from 'react-icons/fa';
+import { FcRotateToLandscape } from 'react-icons/fc';
 
 const Services = () => {
     const services = [
         {
-            icon: FaPaw,
-            heading: "Garden Design & Planning",
-            description: "Turn your ideas into stunning outdoor realities.",
-            image: "/images/pet3.jpeg"
+            icon: FaTree ,
+            heading: " Pet-Friendly Landscaping",
+            description: "We design outdoor spaces with plants and materials, ensuring your yard is lush and green.",
+            image: "/images/landscaping.jpeg"
         },
         {
-            icon: FaPaw,
-            heading: "Lawn Care & Maintenance",
-            description: "Keep your garden vibrant and healthy year-round.",
-            image: "/images/pet3.jpeg"
+            icon: FaDog,
+            heading: "Custom Pet Play Zones",
+            description: "Play areas with tunnels and agility features designed to suit your pets energy.",
+            image: "/images/playzone.jpeg"
         },
         {
-            icon: FaPaw,
-            heading: "Landscape Architecture",
-            description: "Enhance your landscape with beautiful patios.",
-            image: "/images/pet3.jpeg"
+            icon: FaBroom,
+            heading: "Mess-Free Lawn Solutions",
+            description: "We use low-maintenance turf and strategic drainage to keep your space fresh and clean.",
+            image: "/images/pet5.jpeg"
         },
         {
-            icon: FaPaw,
-            heading: "Seasonal Planting Services",
-            description: "Keep your garden vibrant and healthy year-round.",
-            image: "/images/pet3.jpeg"
+            icon: FaWalking,
+            heading: "Paw Pathways & Access Ramps",
+            description: "Install paths, ramps, and easy access points for senior or small pets.",
+            image: "/images/pet-ramp.jpeg"
         },
     ]
     return (
         <section className="services flex-center">
             <div className="services-inner">
-                <h4>OUR SERVICES</h4>
-                {/* <FaPaw size={32} color="#4CAF50" /> */}
-                <h1>Comprehensive Gardening and Landscaping Solutions</h1>
+
+                <div className='section-header flex-center'>
+                    <div className='section-header-with-icon flex-center'>
+                        <div>
+                            <i><FaPaw size={17} color="#333333" /></i>
+                            <span>OUR SERVICES</span>
+                        </div>
+                    </div>
+                    <h1>Tailored Landscaping for Happy Pets & Beautiful Yards</h1>
+                </div>
+
+
                 <div className="service-cards">
                     {services.map((item, index) => {
                         const Icon = item.icon;
                         return (
                             <div key={index} className="service-card">
-                                {Icon ? <Icon size={32} color="#4CAF50" /> : <p>No icon</p>}
-                                <h2>{item.heading}</h2>
-                                <p>{item.description}</p>
+                                <span className="icon"><Icon size={30} color="#333333" /></span>
+                                <h3>{item.heading}</h3>
+                                <p className='soft-text'>{item.description}</p>
                                 <img src={item.image} alt={item.heading} />
                             </div>
                         );
