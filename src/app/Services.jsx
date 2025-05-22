@@ -1,10 +1,9 @@
-import { FaBroom, FaDog, FaHippo, FaImage, FaPaw, FaTree, FaWalking } from 'react-icons/fa';
-import { FcRotateToLandscape } from 'react-icons/fc';
+import { FaBroom, FaDog, FaPaw, FaTree, FaWalking } from 'react-icons/fa';
 
 const Services = () => {
     const services = [
         {
-            icon: FaTree ,
+            icon: FaTree,
             heading: " Pet-Friendly Landscaping",
             description: "We design outdoor spaces with plants and materials, ensuring your yard is lush and green.",
             image: "/images/landscaping.jpeg"
